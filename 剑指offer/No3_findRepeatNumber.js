@@ -4,12 +4,12 @@
  */
 var findRepeatNumber = function(nums) {
   const len = nums.length;
-  const obj = {};
+  const hash = {};
   for (let i = 0; i < len; i++) {
-    if (obj[nums[i]] !== undefined) {
+    if (hash[nums[i]]) {
       return nums[i];
     }
-    obj[nums[i]] = i;
+    hash[nums[i]] = true;
   }
 };
 
