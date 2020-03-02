@@ -14,3 +14,20 @@ var containsDuplicate = function(nums) {
   }
   return false;
 };
+// method 2 use the dict to get value
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+  const dict = {};
+  const len = nums.length;
+  for (let i = 0; i < len; i++) {
+    if (dict[nums[i]]) {
+      return true;
+    } else {
+      dict[nums[i]] = true;
+    }
+  }
+  return false;
+};
