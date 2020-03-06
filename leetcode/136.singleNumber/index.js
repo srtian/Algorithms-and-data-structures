@@ -3,14 +3,10 @@ var singleNumber = function(nums) {
   let dict = {};
   for (let i = 0; i < size; i++) {
     if (dict[nums[i]]) {
-      dict[nums[i]] = false;
+      delete dict[nums[i]];
     } else {
-      dict[nums[i]] = true;
+      dict[nums[i]] = 1;
     }
   }
-  for (let i = 0; i < size; i++) {
-    if (dict[nums[i]]) {
-      return nums[i];
-    }
-  }
+  return Object.keys(dict)[0];
 };
