@@ -23,3 +23,13 @@ var invertTree = function(root) {
   }
   return root;
 };
+
+// method 2
+var invertTree = function(root) {
+  if (!root) return root;
+  const left = invertTree(root.left);
+  const right = invertTree(root.right);
+  root.right = left;
+  root.left = right;
+  return root;
+};
