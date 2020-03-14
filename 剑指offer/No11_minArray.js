@@ -2,7 +2,6 @@
  * @param {number[]} numbers
  * @return {number}
  */
-// test
 var minArray = function(numbers) {
   let j = 0;
   let i = numbers.length - 1;
