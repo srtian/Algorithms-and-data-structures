@@ -20,5 +20,4 @@ function mergeTwoList(l1, l2) {
     l1.next = mergeTwoList(l1.next, l2);
     return l1;
   }
-  return l1;
 }
