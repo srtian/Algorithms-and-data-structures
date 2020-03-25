@@ -1,5 +1,5 @@
 var singleNumber = function(nums) {
-  let size = nums.length;
+  const size = nums.length;
   let dict = {};
   for (let i = 0; i < size; i++) {
     if (dict[nums[i]]) {

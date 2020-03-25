@@ -5,8 +5,8 @@
  */
 var intersect = function(nums1, nums2) {
   let dict = {};
-  let size1 = nums1.length;
-  let size2 = nums2.length;
+  const size1 = nums1.length;
+  const size2 = nums2.length;
   let arr = [];
   for (let i = 0; i < size1; i++) {
     if (!dict[nums1[i]]) {

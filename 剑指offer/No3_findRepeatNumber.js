@@ -4,7 +4,7 @@
  */
 var findRepeatNumber = function(nums) {
   const len = nums.length;
-  const hash = {};
+  let hash = {};
   for (let i = 0; i < len; i++) {
     if (hash[nums[i]]) {
       return nums[i];
