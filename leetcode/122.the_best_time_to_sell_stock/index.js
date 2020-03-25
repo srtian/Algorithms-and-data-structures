@@ -4,7 +4,7 @@
  */
 var maxProfit = function(prices) {
   let profit = 0;
-  let size = prices.length;
+  const size = prices.length;
   for (let i = 1; i < size; i++) {
     if (prices[i] > prices[i - 1]) {
       profit = profit + prices[i] - prices[i - 1];
