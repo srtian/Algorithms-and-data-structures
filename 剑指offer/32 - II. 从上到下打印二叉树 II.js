@@ -25,3 +25,5 @@ var recur = (root, level, res) => {
   recur(root.right, level + 1, res);
   return res;
 };
+
+// 使用二维数组，用一个level1来记录每一层的层数，因为数组的参数是不变的，因此只需往对应的层级里push数据即可
