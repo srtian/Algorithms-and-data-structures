@@ -2,14 +2,21 @@
  * @param {number} x
  * @return {number}
  */
+/**
+ * @param {number} x
+ * @return {number}
+ */
 var reverse = function(x) {
-  let target = (x > 0 ? x : -x)
+  const isPositive = x > 0;
+  let target = (isPositive ? x : -x)
     .toString()
     .split("")
     .reverse()
     .join("");
-  target = x > 0 ? +target : -target;
-  if (target < Math.pow(-2, 31) || target > Math.pow(2, 31) - 1) {
+  target = isPositive ? +target : -target;
+  const max = Math.pow(2, 31) - 1;
+  const min = Math.pow(-2, 31);
+  if (target < min || target > max) {
     return 0;
   }
   return target;
