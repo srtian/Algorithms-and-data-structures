@@ -9,11 +9,7 @@ var isAnagram = function(s, t) {
   if (sSize !== tSize) return false;
   let dict = {};
   for (let i = 0; i < sSize; i++) {
-    if (dict[s[i]]) {
-      dict[s[i]] = dict[s[i]] + 1;
-    } else {
-      dict[s[i]] = 1;
-    }
+    dict[s[i]] ? (dict[s[i]] = dict[s[i]] + 1) : (dict[s[i]] = 1);
   }
   for (let i = 0; i < tSize; i++) {
     if (dict[t[i]]) {

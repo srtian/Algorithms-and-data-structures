@@ -1,0 +1,23 @@
+{
+  "name": "algotithms",
+  "version": "1.0.0",
+  "description": "excercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srtian/Algorithms-and-data-structures.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srtian/Algorithms-and-data-structures/issues"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "homepage": "https://github.com/srtian/Algorithms-and-data-structures#readme"
+}
