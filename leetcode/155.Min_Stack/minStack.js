@@ -13,7 +13,7 @@ var MinStack = function() {
 MinStack.prototype.push = function(x) {
   this.stack.push(x);
   const len = this.helper.length;
-  if (len === 0 || this.helper[len - 1] >= x) {
+  if (!len || this.helper[len - 1] >= x) {
     this.helper.push(x);
   } else {
     this.helper.push(this.helper[len - 1]);
