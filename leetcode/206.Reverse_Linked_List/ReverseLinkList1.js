@@ -20,3 +20,14 @@ var reverseList = function(head) {
   }
   return prev;
 };
+
+// 方法二：递归
+var reverseList = function(head) {
+  const reverse = (prev, cur) => {
+    if(!cur) return prev
+    let next = cur.next
+    cur.next = prev
+    return reverse(cur, next)
+  }
+  return reverse(null, head)
+};
