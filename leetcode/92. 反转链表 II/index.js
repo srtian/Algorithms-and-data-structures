@@ -12,24 +12,24 @@
  * @return {ListNode}
  */
 var reverseBetween = function(head, m, n) {
-  const list = new ListNode(0);
-  list.next = head;
-  let nodeList = list;
-  while (m > 1) {
-    nodeList = nodeList.next;
-    m--;
-    n--;
+  let dummy = new ListNode(0)
+  dummy.next = head
+  let temp = dummy
+  while(m > 1) {
+      temp = temp.next
+      m--
+      n--
   }
-  let prev = null;
-  let curr = nodeList.next;
-  while (n > 0) {
-    let next = curr.next;
-    curr.next = prev;
-    prev = curr;
-    curr = next;
-    n--;
+  let prev = null
+  let curr = temp.next
+  while(n > 0) {
+      let next = curr.next
+      curr.next = prev
+      prev = curr
+      curr = next
+      n--
   }
-  nodeList.next.next = curr;
-  nodeList.next = prev;
-  return list.next;
+  temp.next.next = curr
+  temp.next = prev
+  return dummy.next
 };
