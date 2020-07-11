@@ -20,3 +20,18 @@ var preorderTraversal = function(root) {
     recv(root)
     return result
 };
+
+// 迭代法
+var preorderTraversal = function(root) {
+    if(!root) return []
+   let stack = []
+   let result = []
+   stack.push(root)
+   while(stack.length) {
+       let node = stack.pop()
+       result.push(node.val)
+       if(node.right) stack.push(node.right)
+       if(node.left) stack.push(node.left)
+   }
+   return result
+};
